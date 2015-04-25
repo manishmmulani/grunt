@@ -1,0 +1,46 @@
+Install grunt globally using npm
+
+sudo npm install -g grunt-cli
+
+Getting started :
+
+Navigate to a Project directory
+npm init (for generating package.json - to define dependencies and packaging your project/modules)
+
+npm install grunt --save-dev
+npm install grunt-contrib-jshint --save-dev
+npm install grunt-contrib-uglify --save-dev
+npm install grunt-contrib-nodeunit --save-dev
+
+
+Generate a Gruntfile.js
+
+grunt.initConfig
+grunt.loadNpmTasks // load grunt plugins
+grunt.registerTasks // register tasks as default
+
+
+Tasks and Targets :
+grunt.initConfig({
+    uglify : {
+        bar : {
+
+        }
+    },
+    concat : {
+        foo : {
+
+        },
+        bar : {
+
+        }
+    }
+})
+
+uglify and concat are tasks, while foo, bar are targets.
+
+grunt uglify:bar will run uglify for bar target.
+grunt concat will run concat for all targets.
+
+Read more about grunt in http://gruntjs.com/configuring-tasks (concat and files related stuff)
+and http://gruntjs.com/sample-gruntfile
